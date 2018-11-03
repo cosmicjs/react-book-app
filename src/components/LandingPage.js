@@ -1,6 +1,7 @@
 import React from 'react'
 import MenuLikes from './MenuLikes';
 import Menu from './Menu';
+import Cards from './Cards';
 
 const LandingPage = ()=>{
   return (
@@ -13,6 +14,7 @@ const LandingPage = ()=>{
             </div>
             <Menu />
         </div>
+        <Cards />
     </div>
   )
 }

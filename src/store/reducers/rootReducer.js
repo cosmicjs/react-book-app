@@ -1,6 +1,7 @@
 
 const initialState = {
-    books: []
+    books: [],
+    menu: []
 }
 
 const reducer = (state=initialState, action) => {
@@ -10,8 +11,14 @@ const reducer = (state=initialState, action) => {
                 ...state,
                 books: action.data.objects
             }
+        case 'FETCH_MENU':
+            return{
+                ...state,
+                menu: action.menu.objects
+            }
         default:
             return state;
+            
     }
     
 }

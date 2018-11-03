@@ -8,6 +8,7 @@ import { FetchApiBooks } from './store/actions/BooksAction';
 class App extends Component {
 
   componentDidMount () {
+
     this.props.fetchBooks();
   }
   render() {
@@ -28,6 +29,7 @@ const mapDispatchToProps = (dispatch) => {
     fetchBooks: () => {
       dispatch(FetchApiBooks());
     }
+    
   }
 }
 export default connect(null,mapDispatchToProps)(App);

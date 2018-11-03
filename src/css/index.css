@@ -41,7 +41,7 @@ body {
   }
   
   a {
-	  color: #999;	border-bottom: 2px solid #666;
+	  color:var(--clr1);
 	  display: inline-block;
 	  font-family: 'Source Sans Pro';
 	  font-size: 14px;
@@ -54,7 +54,7 @@ body {
   
   a:hover {
 	  color: #fff;
-	  border-bottom: 2px solid #fff;
+	 
   }
 
 
@@ -87,7 +87,7 @@ h1{
 
 .like-menu{
 
-	background: var(--clr4);
+	background: var(--clr3);
 	width:300px;
 	margin-bottom: 5%;
 	border-bottom-left-radius: 5px;
@@ -109,7 +109,7 @@ h1{
 }
 .category-menu{
 	width:300px;
-	background:red;
+	
 }
 .category-menu ul{
 	list-style-type: none;
@@ -119,4 +119,29 @@ h1{
 	flex-wrap: wrap;
 	text-align: center;
 	padding: 0;
+}
+
+/* cards */
+
+.cards{
+	height: 3000px;
+	width:100%;
+	display:grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 600px 600px 600px;
+	justify-items: center;
+	margin:0 auto;
+	background: var(--clr5);
+	
+	
+}
+.card{
+	width:320px;
+	height: auto;
+	color:var(--clr2);
+	
+}
+.card img{
+	width:320px;
+	height: 500px;
 }
