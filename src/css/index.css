@@ -1,0 +1,122 @@
+:root{
+	--clr1: #333533;
+	--clr2: #242423;
+	--clr3: #F5CB5C;
+	--clr4: #E8EDDF;
+	--clr5: #CFDBD5;
+}
+
+html{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+	  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+	  sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+  h1 {
+	  color: rgb(48, 48, 48);
+	  font-family:'Playfair Display';
+	  font-size: 5.5rem;
+	  font-weight: 900;
+	  line-height: 62px;
+	
+	/* font-family: 'Dancing Script', cursive; */
+  /* font-family: 'Lobster', cursive; */
+  }  
+  p {
+	  color: var(--clr1);
+	  font-weight: 400;
+	  font-size: 24px;
+	  line-height: 36px;
+	  margin-bottom: 24px;
+	max-width: 380px;
+   font-family: 'Lobster', cursive;
+  }
+  
+  a {
+	  color: #999;	border-bottom: 2px solid #666;
+	  display: inline-block;
+	  font-family: 'Source Sans Pro';
+	  font-size: 14px;
+	  font-weight: 500;
+	  letter-spacing: 1px;
+	  line-height: 24px;
+	  text-decoration: none;
+	  text-transform: uppercase;
+  }
+  
+  a:hover {
+	  color: #fff;
+	  border-bottom: 2px solid #fff;
+  }
+
+
+
+
+
+/* landing page */
+h1{
+	margin:0;
+	padding:0;
+}
+.container {
+	height: 100vh;
+	width:100vw;
+	background:#F5CB5C;
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.main-slide{
+	
+	text-align: center;
+	padding: 30px;
+	width:300px;
+
+}
+
+/* menu likes */
+
+.like-menu{
+
+	background: var(--clr4);
+	width:300px;
+	margin-bottom: 5%;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+
+}
+.like-menu ul{
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.like-menu li{
+	flex: 1;
+	padding:0 20px;
+	
+}
+.category-menu{
+	width:300px;
+	background:red;
+}
+.category-menu ul{
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+	padding: 0;
+}
