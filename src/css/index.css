@@ -20,6 +20,8 @@ body {
 	  sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background:var(--clr5);
+
   }
   h1 {
 	  color: rgb(48, 48, 48);
@@ -59,29 +61,41 @@ body {
   }
 
 
+.main-wrap{
 
+}
 
 
 /* landing page */
-h1{
+h1,h2{
 	margin:0;
 	padding:0;
 }
+
+
 .container {
-	height: 100vh;
-	width:100vw;
+	min-height: 100vh;
+	width:100%;
 	background:#F5CB5C;
 	display:flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	
 }
 .main-slide{
 	
 	text-align: center;
 	padding: 30px;
-	width:300px;
-
+	width:80%;
+	flex:6;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+.main-slide p{
+	text-align: center;
 }
 
 /* menu likes */
@@ -93,6 +107,8 @@ h1{
 	margin-bottom: 5%;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+	flex:2;
+
 
 
 }
@@ -110,6 +126,8 @@ h1{
 }
 .category-menu{
 	width:300px;
+	flex:1;
+	
 	
 }
 .category-menu ul{
@@ -125,24 +143,99 @@ h1{
 /* cards */
 
 .cards{
-	height: 3000px;
-	width:100%;
-	display:grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 600px 600px 600px;
-	justify-items: center;
-	margin:0 auto;
-	background: var(--clr5);
-	
-	
+ max-width:360px;
+ height: 2000px;
+ display:grid;
+ grid-template-columns: 320px;
+ grid-template-rows: auto;
+ margin: 20px auto;
+ align-items: baseline;
+justify-content: center;
+background:var(--clr5);
+
 }
 .card{
 	width:320px;
 	height: auto;
 	color:var(--clr2);
+	position: relative;
+	
+	
 	
 }
 .card img{
-	width:320px;
+	width:100%;
 	height: 500px;
 }
+.overlay{
+	width: 100%;
+	height: 500px;
+
+	position: relative;
+	margin-bottom: 20px;
+}
+.strip{
+	height: 100px;
+	width:100%;
+	background: var(--clr4);
+	position: absolute;
+	left:0;
+	bottom:0;
+}
+.strip .like-menu {
+	background: transparent;
+	display:flex;
+	justify-content: center;
+	height: 100px;
+}
+.cards-title{
+	width:95%;
+	margin:40px auto;
+	font-size: 3rem;
+	
+}
+.cards-title::before{
+	content: '\f006 ';
+	font-family: "FontAwesome";
+	
+}
+
+@media(min-width:660px){
+
+	.cards{
+		max-width:660px;
+		display:grid;
+		height: auto;
+		grid-template-columns: 320px 320px;
+		grid-column-gap: 10px;
+		grid-row-gap: 50px;
+		grid-template-rows: auto;
+		margin: 20px auto;
+	
+	   justify-content: center;
+	   background:var(--clr5);
+	   
+	   }
+
+}
+
+@media(min-width:980px){
+
+	.cards{
+		max-width:960px;
+		display:grid;
+		height: auto;
+		grid-template-columns: 320px 320px 320px;
+		grid-column-gap: 10px;
+		grid-row-gap: 50px;
+		grid-template-rows: auto;
+		margin: 20px auto;
+	   justify-content: center;
+	   background:var(--clr5);
+	 
+
+	   
+	   }
+	  
+}
+
