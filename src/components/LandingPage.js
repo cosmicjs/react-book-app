@@ -14,7 +14,9 @@ const LandingPage = ()=>{
             </div>
             <Menu />
         </div>
+        <h2 className="cards-title">Favourite</h2>
         <Cards />
+      
     </div>
   )
 }
