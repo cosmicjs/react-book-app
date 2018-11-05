@@ -5,27 +5,13 @@ import { connect } from 'react-redux';
 import LandingPage from './components/LandingPage';
 import { FetchApiBooks } from './store/actions/BooksAction';
 import Icon from './components/Icon';
+import SinglePageCard from './components/SinglePageCard';
+
 class App extends Component {
 
   componentDidMount () {
 
     this.props.fetchBooks();
-  //   const icon = document.querySelector('.top-bar');
-  //   const all = document.querySelector('.all-overlay');
-
-  //   icon.addEventListener('click', () => {
-  //     if(all.style.top === "-100%") {
-  //       all.style.top = '0px';
-  //       console.log("if");
-       
-  //   }
-  //   else{
-  //       all.style.top = '-100%';
-  //       console.log("work")
-
-  //   }
-  
-  // });
   }
   render() {
     return (
@@ -33,7 +19,8 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path='/' exact component={LandingPage}/>
-            <Route path='/search'  component={Icon} />
+            <Route path='/search' exact component={Icon} />
+            <Route path='/:item_slug' component={SinglePageCard} />
           </Switch>
         </BrowserRouter>
       </div>
