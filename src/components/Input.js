@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
   render() {
     return (
       <div>
-        <input type="text" value={this.props.input} onChange={this.props.handleInput}/>
+        <input type="text"  className="input" placeholder="Search.. " value={this.props.input} onChange={this.props.handleInput}/>
       </div>
     )
   }

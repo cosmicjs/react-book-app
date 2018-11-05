@@ -3,19 +3,17 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
  function SearchList(props) {
   return (
-    <div>
-      
-        <ul>
+    <div className="search-list"> 
          {
            props.value && props.lists.map((item, index) => {
                  return(
-                    <Link  key={index} to={'/'+ item.slug }><li>{item.title}</li></Link> 
+                    <Link className="item" key={index} to={'/'+ item.slug }>
+                    <div className="item-title">{item.title}</div>
+                    <div className="item-author">{item.metadata.author.title}</div>
+                    </Link> 
                  )
              })
          }
-        </ul>
-
-        
       </div>
   )
 }
