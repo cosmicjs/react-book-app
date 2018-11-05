@@ -3,15 +3,14 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import MenuLikes from './MenuLikes';
 const Cards = (props) => {
- 
+
   return (
     <div className="cards">
-    
-    
+
       {
           props.booksList.map((item, index) => {
               return(
-                <Link to='/' key={index}>
+                <Link to={'/'+ item.slug } key={index}>
                     <div className="card">
                         <div className="overlay">
                         <img src={item.metadata.hero.url} alt=""/>

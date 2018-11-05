@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 
 import LandingPage from './components/LandingPage';
 import { FetchApiBooks } from './store/actions/BooksAction';
+import Icon from './components/Icon';
+import SinglePageCard from './components/SinglePageCard';
 
 class App extends Component {
 
@@ -16,7 +18,9 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route path='/' component={LandingPage}/>
+            <Route path='/' exact component={LandingPage}/>
+            <Route path='/search' exact component={Icon} />
+            <Route path='/:item_slug' component={SinglePageCard} />
           </Switch>
         </BrowserRouter>
       </div>
