@@ -209,6 +209,7 @@ grid-row-gap: 50px;
 	right:30px;
 	color:var(--clr1);
 	z-index:9999;
+	cursor: pointer;
 	
 }
 .search{

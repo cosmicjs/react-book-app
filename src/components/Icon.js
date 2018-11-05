@@ -3,6 +3,7 @@ import Menu from './Menu';
 import MenuLikes from './MenuLikes';
 import Input from './Input';
 import { Link } from 'react-router-dom';
+import SearchList from './SearchList';
 
 export default function Icon() {
   return (
@@ -13,6 +14,7 @@ export default function Icon() {
    
         <Menu />
         <Input />
+        <SearchList />
     </div>
   )
 }

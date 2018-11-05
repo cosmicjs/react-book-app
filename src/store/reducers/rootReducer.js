@@ -1,7 +1,9 @@
 
 const initialState = {
     books: [],
-    menu: []
+    menu: [],
+    value: '',
+    search:[]
 }
 
 const reducer = (state=initialState, action) => {
@@ -16,6 +18,17 @@ const reducer = (state=initialState, action) => {
                 ...state,
                 menu: action.menu.objects
             }
+        case 'INPUT_CHANGE': 
+        console.log("Input", action);
+        let newList = state.books.filter(item => {
+            return item.slug.toLowerCase().search(action.input.toLowerCase()) !== -1 || item.metadata.author.title.toLowerCase().search(action.input.toLowerCase()) !== -1; 
+        });
+       
+        return{
+            ...state,
+            search: newList,
+            value:action.input
+        }
         default:
             return state;
             
