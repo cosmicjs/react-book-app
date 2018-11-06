@@ -212,8 +212,6 @@ grid-row-gap: 50px;
 	margin:20px auto;
 	width:100%;
 	align-items: center;
-	
-
 }
 .input{
 	width:320px;
@@ -228,9 +226,9 @@ grid-row-gap: 50px;
 }
 .item {
 	display:grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 3fr 2fr;
 	grid-template-rows: auto;
-	padding:10px 4%;
+	padding:20px 4%;
 	width:100%;
 	margin:5px 0;
 	grid-column-gap: 5%;
@@ -240,18 +238,15 @@ grid-row-gap: 50px;
 	
 }
 .item-author{
-	font-size:0.8em;
-	
-	
+	font-size:0.9rem;	
 }
 .item-title{
-  font-size:1em;
+  font-size:1.05rem;
 }
 .item:hover{
 	background: var(--clr3);
 }
 /* menu bar  */
-
 .div{
 	height: 100%;
 }
@@ -296,9 +291,7 @@ grid-row-gap: 50px;
 	width:320px;
 	padding:20px 0;
 	box-sizing: border-box;
-	margin:0px auto;
-	
-	
+	margin:0px auto;	
 }
 .btn-back{
 	background:var(--clr5);
@@ -308,11 +301,8 @@ grid-row-gap: 50px;
 	margin:0 auto;
 	font-size:1.2rem;
 	font-weight: 400;
-	cursor: pointer;
-	
+	cursor: pointer;	
 }
-
-
 .single-card-category{
 	background:var(--clr1);
 	color:var(--clr4);
@@ -324,9 +314,6 @@ grid-row-gap: 50px;
 	font-weight: 700;
 	cursor: pointer;
 }
-
-
-
 @media(min-width:660px){
 
 	.cards{
@@ -498,10 +485,11 @@ grid-row-gap: 50px;
 		margin-top: 10px;
 		width:65px;
 		margin-left:10px;
-		background:var(--clr5);
-		color:var(--clr2);
+		background:var(--clr3);
+		color:var(--clr1);
 		word-break: break-all;
-		font-size:2.5rem;
+		font-size:2.3rem;
+		text-transform: uppercase;
 		
 	}
 	.btn-back{
@@ -552,10 +540,10 @@ grid-row-gap: 50px;
 	.single-card .text{
 		overflow-y: scroll;
 		margin-bottom: 40px;
-		max-height: 350px;
+		max-height: 400px;
 	}
 	.text p{
-		padding:10px;
+		padding:10px 30px 10px 10px;
 		font-size: 1.3rem;
 		font-family: 'Segoe UI', 'Source Sans Pro', Tahoma, Geneva, Verdana, sans-serif;
 		color: var(--clr1);
@@ -616,8 +604,6 @@ grid-row-gap: 50px;
 		margin-top: 10px;
 		width:70px;
 		margin-left:10px;
-		background:var(--clr5);
-		color:var(--clr2);
 		word-break: break-all;
 		font-size:3rem;
 		
