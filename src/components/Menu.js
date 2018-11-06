@@ -13,10 +13,10 @@ import { NavLink} from 'react-router-dom';
     return (
       <div className="category-menu">
         <ul>
-            {
-              menuCategory.map((item, index) => {
+            {   
+              menuCategory && menuCategory.map((item, index) => {
                 return (
-                  <NavLink key={index} to={'/'}> <li>{item.title}</li></NavLink>
+                  <NavLink key={index} to={'/categories/'+ item.slug }> <li>{item.title}</li></NavLink>
                 )
               })
             }

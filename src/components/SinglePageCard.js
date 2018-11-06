@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
   <div className="div">
     <Link to='/search'><i className="fa fa-search fa-2x top-bar" aria-hidden="true" ></i></Link>
     <div className="single-card">
-    {/* <Link to='/' className="btn-back">Go back</Link> */}
    <div className="book"> {props.book && <img src={props.book.metadata.hero.url} alt="" />}
    </div>
      <div className="book-text">

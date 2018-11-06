@@ -6,6 +6,7 @@ import LandingPage from './components/LandingPage';
 import { FetchApiBooks } from './store/actions/BooksAction';
 import Icon from './components/Icon';
 import SinglePageCard from './components/SinglePageCard';
+import CategoryCard from './components/CategoryCard';
 
 class App extends Component {
 
@@ -20,7 +21,8 @@ class App extends Component {
           <Switch>
             <Route path='/' exact component={LandingPage}/>
             <Route path='/search' exact component={Icon} />
-            <Route path='/:item_slug' component={SinglePageCard} />
+            <Route path='/:item_slug' exact component={SinglePageCard} />
+            <Route path='/categories/:category_slug' component={CategoryCard} />
           </Switch>
         </BrowserRouter>
       </div>
