@@ -9,14 +9,14 @@ import { Link } from 'react-router-dom';
   <div className="div">
     <Link to='/search'><i className="fa fa-search fa-2x top-bar" aria-hidden="true" ></i></Link>
     <div className="single-card">
-    <Link to='/' className="btn-back">Go back</Link>
+    {/* <Link to='/' className="btn-back">Go back</Link> */}
    <div className="book"> {props.book && <img src={props.book.metadata.hero.url} alt="" />}
    </div>
      <div className="book-text">
      <h1> {props.book && props.book.title}</h1>
      
   { props.book ? <div className="text"  dangerouslySetInnerHTML={{__html:props.book.content}}></div> : <p> Loading </p> } 
-  
+  <Link to='/' className="btn-back">Go back</Link>
      </div>
     
      <Link to='/' className="single-card-category">

@@ -309,9 +309,7 @@ grid-row-gap: 50px;
 	font-size:1.2rem;
 	font-weight: 400;
 	cursor: pointer;
-	position: absolute;
-	bottom:0px;
-	right: 0px;	
+	
 }
 
 
@@ -419,53 +417,29 @@ grid-row-gap: 50px;
 		max-width: 60%;
 	
 	}
-
-	/* .single-card{		
-		grid-template-rows: 900px 1fr 80px;
-
-	}
 	.single-card h1{
 		color: var(--clr2);
 		font-family:'Playfair Display';
-		font-size: 5.5rem;
+		font-size: 2.7rem;
 		font-weight: 900;
-	}
-	.single-card p{
-		font-size: 1.7rem;
-		line-height: 3rem;
-	}
-	/* .book{	
-		height: 900px;	
-	}
-	.book img{
-		width:480px;
-		height: 750px;
-		
-	}
-	.book-text{
-		width:750px;
-	} */ 
-	.single-card h1{
-		color: var(--clr2);
-		font-family:'Playfair Display';
-		font-size: 3.5rem;
-		font-weight: 900;
-		margin-bottom: 40px;
+		margin-bottom: 10px;
+		max-height: 170px;
+		overflow: hidden;
 	}
 	.single-card .text{
 		overflow-y: scroll;
-		margin-bottom: 20px;
-		max-height: 250px;
+		margin-bottom: 30px;
+		height: 280px;
 	}
 	.text p{
-		padding:20px;
+		padding:10px 20px 0 0;
 		font-size: 1.1rem;
 		font-family: 'Segoe UI', 'Source Sans Pro', Tahoma, Geneva, Verdana, sans-serif;
 		color: var(--clr1);
 		opacity:0.9;
 		line-height: 36px;
-		
 	}
+
 	.div{
 		display:flex;
 		justify-content: center;
@@ -475,7 +449,7 @@ grid-row-gap: 50px;
 		width:100%;
 		min-height:100%;
 		padding-bottom: 80px;
-		background: url('../back.jpg');
+		
 		background-repeat: no-repeat;
 		background-position: top center;	
 	}
@@ -507,11 +481,12 @@ grid-row-gap: 50px;
 	}
 	.book-text{
 		background:transparent;
-		height: 550px;
-		padding: 40px 10px;
+		height: 600px;
+		padding: 40px 20px;
 		width:450px;
 		box-sizing: border-box;
 		margin:0px auto;
+		
 		
 	}
 	.single-card-category{
@@ -521,7 +496,7 @@ grid-row-gap: 50px;
 		grid-row-end: 2;
 		height: 580px;	
 		margin-top: 10px;
-		width:70px;
+		width:65px;
 		margin-left:10px;
 		background:var(--clr5);
 		color:var(--clr2);
@@ -597,9 +572,6 @@ grid-row-gap: 50px;
 		width:100%;
 		min-height:100%;
 		padding-bottom: 150px;
-		background: url('../back.jpg');
-		background-repeat: no-repeat;
-		background-position: top center;	
 	}
 	.single-card{
 		display:grid;
