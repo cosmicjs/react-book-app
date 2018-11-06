@@ -22,49 +22,26 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background:var(--clr5);
 
-  }
-  h1 {
-	  color: rgb(48, 48, 48);
-	  font-family:'Playfair Display';
-	  font-size: 5.5rem;
-	  font-weight: 900;
-	  line-height: 62px;
-	
-	/* font-family: 'Dancing Script', cursive; */
-  /* font-family: 'Lobster', cursive; */
   }  
-  p {
-	  color: var(--clr1);
-	  font-weight: 400;
-	  font-size: 1.3rem;
-	  line-height: 30px;
-	  margin-bottom: 24px;
-	  max-width: 80%;
-	  padding-top:40px;
-   font-family: 'Lobster', cursive;
-   opacity:0.9;
-  }
-  
-  a {
-	  color:var(--clr1);
-	  display: inline-block;
-	  font-family: 'Source Sans Pro';
-	  font-size: 14px;
-	  font-weight: 500;
-	  letter-spacing: 1px;
-	  line-height: 24px;
-	  text-decoration: none;
-	  text-transform: uppercase;
-  }
-  
-  a:hover {
-	  color: #fff;
-	 
-  }
+.main-wrap  h1 {
+	color: rgb(48, 48, 48);
+	font-family:'Playfair Display';
+	font-size: 5.5rem;
+	font-weight: 900;
+}
+.main-wrap p {
+	color: var(--clr1);
+	font-weight: 400;
+	font-size: 1.3rem;
+	max-width: 80%;
+ font-family: 'Lobster', cursive;
+ opacity:0.9;
+}
 
-
-.main-wrap{
 	
+a{
+	color:var(--clr2);
+	text-decoration: none;
 }
 
 
@@ -237,8 +214,6 @@ grid-row-gap: 50px;
 	margin:20px auto;
 	width:100%;
 	align-items: center;
-	
-
 }
 .input{
 	width:320px;
@@ -253,9 +228,9 @@ grid-row-gap: 50px;
 }
 .item {
 	display:grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 3fr 2fr;
 	grid-template-rows: auto;
-	padding:10px 4%;
+	padding:20px 4%;
 	width:100%;
 	margin:5px 0;
 	grid-column-gap: 5%;
@@ -265,39 +240,82 @@ grid-row-gap: 50px;
 	
 }
 .item-author{
-	font-size:0.8em;
-	
-	
+	font-size:0.9rem;	
 }
 .item-title{
-  font-size:1em;
+  font-size:1.05rem;
 }
 .item:hover{
 	background: var(--clr3);
 }
 /* menu bar  */
-
-
-/* .all-overlay{
-	background: red;
-	position: fixed;
-	top:-100%;
-	left:0;
-	z-index: 999;
-	width:100%;
+.div{
 	height: 100%;
-	transition: all 2s ease-in-out;
-	
-	
-} */
+}
 .single-card{
+	background:var(--clr4);
+	display:grid;
+	align-content: center;
+	grid-template-columns:1fr;
+	grid-template-rows: 600px 1fr 80px;
+	grid-row-gap: 40px;
 	
+	
+}
+.single-card h1{
+	color: var(--clr2);
+	font-family:'Playfair Display';
+	font-size: 3.5rem;
+	font-weight: 900;
 }
 .single-card p{
-	font-family: "Source-Sans-Pro", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Segoe UI', 'Source Sans Pro', Tahoma, Geneva, Verdana, sans-serif;
+	color: var(--clr1);
+	font-weight: 300;
+	font-size: 1.3rem;
+ opacity:0.9;
+ line-height: 36px;
 }
-
-
+.book{
+	background:var(--clr3);
+	display:flex;
+	justify-content: center;
+	height: 600px;	
+}
+.book img{
+	width:320px;
+	height: 480px;
+	padding:70px 0 0;
+	
+}
+.book-text{
+	background:var(--clr4);
+	width:320px;
+	padding:20px 0;
+	box-sizing: border-box;
+	margin:0px auto;	
+}
+.btn-back{
+	background:var(--clr5);
+	padding:10px 20px;
+	text-align: center;
+	width: 120px;
+	margin:0 auto;
+	font-size:1.2rem;
+	font-weight: 400;
+	cursor: pointer;	
+}
+.single-card-category{
+	background:var(--clr1);
+	color:var(--clr4);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	font-weight: 700;
+	cursor: pointer;
+}
 @media(min-width:660px){
 
 	.cards{
@@ -336,6 +354,33 @@ grid-row-gap: 50px;
 		font-size: 1.3em;
 	}
 
+	.single-card{		
+		grid-template-rows: 800px 1fr 80px;
+
+	}
+	.single-card h1{
+		color: var(--clr2);
+		font-family:'Playfair Display';
+		font-size: 4.5rem;
+		font-weight: 900;
+	}
+	.single-card p{
+		font-size: 1.5rem;
+	}
+	.book{	
+		height: 800px;	
+	}
+	.book img{
+		width:448px;
+		height: 700px;
+		
+	}
+	.book-text{
+		width:550px;
+	}
+
+
+
 }
 
 @media(min-width:980px){
@@ -361,6 +406,104 @@ grid-row-gap: 50px;
 		max-width: 60%;
 	
 	}
+	.single-card h1{
+		color: var(--clr2);
+		font-family:'Playfair Display';
+		font-size: 2.7rem;
+		font-weight: 900;
+		margin-bottom: 10px;
+		max-height: 170px;
+		overflow: hidden;
+	}
+	.single-card .text{
+		overflow-y: scroll;
+		margin-bottom: 30px;
+		height: 280px;
+	}
+	.text p{
+		padding:10px 20px 0 0;
+		font-size: 1.1rem;
+		font-family: 'Segoe UI', 'Source Sans Pro', Tahoma, Geneva, Verdana, sans-serif;
+		color: var(--clr1);
+		opacity:0.9;
+		line-height: 36px;
+	}
+
+	.div{
+		display:flex;
+		justify-content: center;
+		align-items: flex-start;
+		padding-top: 80px;
+		margin: 0 auto;
+		width:100%;
+		min-height:100%;
+		padding-bottom: 80px;
+		
+		background-repeat: no-repeat;
+		background-position: top center;	
+	}
+	.single-card{
+		display:grid;
+		grid-template-columns: 70px 450px 450px;
+		grid-template-rows: 600px;
+		align-content: center;
+		grid-gap:10px;
+		background: transparent;
+		background:var(--clr4);
+		position: relative;
+	}
+	.book{
+		background:transparent;
+		display:flex;
+		justify-content: center;
+		height: 550px;	
+		width:100%;
+		position: relative;
+	}
+	.book img{
+		width:440px;
+		height: 680px;
+		padding:0px 0 0;
+		position: absolute;
+		top:-40px;
+		
+	}
+	.book-text{
+		background:transparent;
+		height: 600px;
+		padding: 40px 20px;
+		width:450px;
+		box-sizing: border-box;
+		margin:0px auto;
+		
+		
+	}
+	.single-card-category{
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		height: 580px;	
+		margin-top: 10px;
+		width:65px;
+		margin-left:10px;
+		background:var(--clr3);
+		color:var(--clr1);
+		word-break: break-all;
+		font-size:2.3rem;
+		text-transform: uppercase;
+		
+	}
+	.btn-back{
+		position: absolute;
+		bottom:30px;
+		right: 30px;
+	}
+	.ctg{
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+	}	
+
 	  
 }
 
@@ -386,8 +529,98 @@ grid-row-gap: 50px;
 	.main-slide p{
 		font-size:2.2rem;
 		max-width: 40%;
+		
 	
 	}
-	  
+
+	.single-card h1{
+		color: var(--clr2);
+		font-family:'Playfair Display';
+		font-size: 3.5rem;
+		font-weight: 900;
+		margin-bottom: 40px;
+	}
+	.single-card .text{
+		overflow-y: scroll;
+		margin-bottom: 40px;
+		max-height: 400px;
+	}
+	.text p{
+		padding:10px 30px 10px 10px;
+		font-size: 1.3rem;
+		font-family: 'Segoe UI', 'Source Sans Pro', Tahoma, Geneva, Verdana, sans-serif;
+		color: var(--clr1);
+		opacity:0.9;
+		line-height: 36px;
+		
+	}
+	.div{
+		display:flex;
+		justify-content: center;
+		align-items: flex-start;
+		padding-top: 150px;
+		margin: 0 auto;
+		width:100%;
+		min-height:100%;
+		padding-bottom: 150px;
+	}
+	.single-card{
+		display:grid;
+		grid-template-columns: 80px 600px 650px;
+		grid-template-rows: 700px;
+		align-content: center;
+		grid-gap:10px;
+		background: transparent;
+		background:var(--clr4);
+	
+	}
+	.book{
+		background:transparent;
+		display:flex;
+		justify-content: center;
+		height: 600px;	
+		width:100%;
+		position: relative;
+	}
+	.book img{
+		width:600px;
+		height: 900px;
+		padding:0px 0 0;
+		position: absolute;
+		top:-100px;	
+	}
+	.book-text{
+		background:transparent;
+		height: 700px;
+		padding: 40px;
+		width:650px;
+		box-sizing: border-box;
+		margin:0px auto;
+		position: relative;
+	}
+	.single-card-category{
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		height: 680px;	
+		margin-top: 10px;
+		width:70px;
+		margin-left:10px;
+		word-break: break-all;
+		font-size:3rem;
+		
+	}
+	.btn-back{
+		position: absolute;
+		bottom:50px;
+		right: 50px;
+	}
+	.ctg{
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+	}	
+
+
 }
 
