@@ -5,8 +5,11 @@ import { connect } from 'react-redux';
      
   return (
     <div className="single-card">
+   <div className="book"> {props.book && <img src={props.book.metadata.hero.url} alt="" />}</div>
+     <div className="book-text">
      <h1> {props.book && props.book.title}</h1>
   { props.book ? <p  dangerouslySetInnerHTML={{__html:props.book.content}}></p> : <p> Loading </p> }
+     </div>
     </div>
   )
 }

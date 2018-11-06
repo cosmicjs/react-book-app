@@ -21,50 +21,24 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background:var(--clr5);
 
-  }
-  h1 {
-	  color: rgb(48, 48, 48);
-	  font-family:'Playfair Display';
-	  font-size: 5.5rem;
-	  font-weight: 900;
-	  line-height: 62px;
-	
-	/* font-family: 'Dancing Script', cursive; */
-  /* font-family: 'Lobster', cursive; */
   }  
-  p {
-	  color: var(--clr1);
-	  font-weight: 400;
-	  font-size: 1.3rem;
-	  line-height: 30px;
-	  margin-bottom: 24px;
-	  max-width: 80%;
-	  padding-top:40px;
-   font-family: 'Lobster', cursive;
-   opacity:0.9;
-  }
-  
-  a {
-	  color:var(--clr1);
-	  display: inline-block;
-	  font-family: 'Source Sans Pro';
-	  font-size: 14px;
-	  font-weight: 500;
-	  letter-spacing: 1px;
-	  line-height: 24px;
-	  text-decoration: none;
-	  text-transform: uppercase;
-  }
-  
-  a:hover {
-	  color: #fff;
-	 
-  }
-
-
-.main-wrap{
-	
+.main-wrap  h1 {
+	color: rgb(48, 48, 48);
+	font-family:'Playfair Display';
+	font-size: 5.5rem;
+	font-weight: 900;
 }
+.main-wrap p {
+	color: var(--clr1);
+	font-weight: 400;
+	font-size: 1.3rem;
+	max-width: 80%;
+ font-family: 'Lobster', cursive;
+ opacity:0.9;
+}
+
+	
+
 
 
 /* landing page */
@@ -276,24 +250,49 @@ grid-row-gap: 50px;
 /* menu bar  */
 
 
-/* .all-overlay{
-	background: red;
-	position: fixed;
-	top:-100%;
-	left:0;
-	z-index: 999;
-	width:100%;
-	height: 100%;
-	transition: all 2s ease-in-out;
-	
-	
-} */
 .single-card{
+	background:var(--clr4);
+	display:grid;
+	align-content: center;
+	grid-template-columns:1fr;
+	grid-template-rows: 600px 1fr ;
 	
+	
+}
+.single-card h1{
+	color: var(--clr2);
+	font-family:'Playfair Display';
+	font-size: 3.5rem;
+	font-weight: 900;
 }
 .single-card p{
-	font-family: "Source-Sans-Pro", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Segoe UI', 'Source Sans Pro', Tahoma, Geneva, Verdana, sans-serif;
+	color: var(--clr1);
+	font-weight: 400;
+	font-size: 1.3rem;
+ opacity:0.9;
 }
+.book{
+	background:var(--clr3);
+	display:flex;
+	justify-content: center;	
+}
+.book img{
+	width:320px;
+	height: 500px;
+	padding:20px 0 0;
+	
+}
+.book-text{
+	background:var(--clr4);
+	width:320px;
+	padding:20px 0;
+	box-sizing: border-box;
+	margin:0 auto;
+	
+	
+}
+
 
 
 @media(min-width:660px){
@@ -385,6 +384,17 @@ grid-row-gap: 50px;
 		font-size:2.2rem;
 		max-width: 40%;
 	
+	}
+	.single-card{
+		display:grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+		align-content: center;
+		height:100vh;
+		background:url('../back.jpg');
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: contain;
 	}
 	  
 }
