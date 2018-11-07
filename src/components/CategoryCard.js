@@ -7,7 +7,6 @@ function CategoryCard(props) {
   return (
     <div>
         {props.category && <LandingPageContent page={props.match.params.category_slug} body={props.category}/>}
-    
        {props.booksList ? <Cards booksList={props.booksList}/> : <i className="fa fa-spinner fa-pulse fa-3x fa-fw"></i>}
     </div>
   )

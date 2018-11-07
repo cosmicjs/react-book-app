@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { FetchApiMenu } from './../store/actions/MenuAction';
 import { NavLink} from 'react-router-dom';
  class Menu extends Component {
 
   componentDidMount () {
-    this.props.fetchMenu();
+    
   }
   render() {
     const { menuCategory } = this.props
@@ -31,11 +30,4 @@ const mapStateToProps = (state) => {
     menuCategory: state.menu
   }
 }
-const mapDispatchToProps = (dispatch) => {
-  return{
-    fetchMenu: () => {
-      dispatch(FetchApiMenu());
-    }
-  }
-}
-export default connect(mapStateToProps,mapDispatchToProps)(Menu);
+export default connect(mapStateToProps)(Menu);
