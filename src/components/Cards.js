@@ -30,10 +30,4 @@ const Cards = (props) => {
     </div>
   )
 }
-// const mapStateToProps = (state) => {
-//     return {
-//         booksList: state.books
-//     }
-// }
-
 export default (Cards);

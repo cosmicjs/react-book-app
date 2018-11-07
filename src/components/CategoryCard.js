@@ -1,11 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Cards from './Cards';
-function Categroies(props) {
+import LandingPageContent from './LandingPageContent';
+
+function CategoryCard(props) {
   return (
     <div>
-     
-        <Cards booksList={props.booksList}/>
+        {props.category && <LandingPageContent page={props.match.params.category_slug} body={props.category}/>}
+    
+       {props.booksList ? <Cards booksList={props.booksList}/> : <i className="fa fa-spinner fa-pulse fa-3x fa-fw"></i>}
     </div>
   )
 }
@@ -14,8 +17,9 @@ const mapStateToProps = (state, ownProps) => {
     return{
         booksList:state.books.filter(cat => {
             // console.log("from map", cat.metadata.category.slug);
-            return cat.metadata.category.slug === category
-        }) 
+            return cat.metadata.category.slug === category      
+        }),
+        category: state.menu.find(item => (item.slug === category))
     }
 }
-export default connect(mapStateToProps)(Categroies);
+export default connect(mapStateToProps)(CategoryCard);
