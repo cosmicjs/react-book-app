@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import MenuLikes from './MenuLikes';
 const Cards = (props) => {
@@ -19,22 +19,21 @@ const Cards = (props) => {
                         </div>
                         <Link to={'/'+ item.slug }>
                         <h2>{item.title}</h2>
+                        </Link>
                         <br/>
                         <div><b>Author:</b> {item.metadata.author.title}</div>
-                        <div><b>Genres:</b> {item.metadata.category.title}</div>
-                        </Link>
+                        <Link to={'/categories/' + item.metadata.category.slug}><div><b>Genres:</b> {item.metadata.category.title}</div></Link> 
                     </div>
-             
               )
           })
       }
     </div>
   )
 }
-const mapStateToProps = (state) => {
-    return {
-        booksList: state.books
-    }
-}
+// const mapStateToProps = (state) => {
+//     return {
+//         booksList: state.books
+//     }
+// }
 
-export default connect(mapStateToProps)(Cards);
+export default (Cards);
