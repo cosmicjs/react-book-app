@@ -1,3 +1,4 @@
+
 :root{
 	--clr1: #333533;
 	--clr2: #242423;
@@ -153,6 +154,7 @@ grid-row-gap: 50px;
 .overlay{
 	width: 100%;
 	height: 500px;
+
 	position: relative;
 	margin-bottom: 20px;
 	
@@ -557,6 +559,7 @@ grid-row-gap: 50px;
 		
 	
 	}
+
 	.single-card h1{
 		color: var(--clr2);
 		font-family:'Playfair Display';
@@ -648,3 +651,4 @@ grid-row-gap: 50px;
 	
 
 }
+
