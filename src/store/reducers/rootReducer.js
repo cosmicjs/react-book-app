@@ -1,22 +1,35 @@
 
 const initialState = {
+    bucket: [],
     books: [],
     menu: [],
     value: '',
     search:[]
+    
 }
 
 const reducer = (state=initialState, action) => {
     switch(action.type) {
         case 'FETCH_BOOKS': 
+        console.log("bucket fetch init", action.data.bucket);
             return{
                 ...state,
-                books: action.data.objects
-            }
+                bucket:action.data.bucket,
+                books: action.data.bucket.objects.filter(item => {
+                    return(item.type_slug === "books")  
+                }),
+                menu: action.data.bucket.objects.filter(item => {
+                    return(item.type_slug === "categories")  
+                })
+            }    
         case 'FETCH_MENU':
+        console.log('bucket menu', state.bucket);
             return{
-                ...state,
-                menu: action.menu.objects
+                ...state
+                // menu: state.bucket.objects.filter(item => {
+                //     console.log('state.menu', state.menu);
+                //     return(item.type_slug === "categories")  
+                // }) 
             }
         case 'INPUT_CHANGE': 
         console.log("Input", action);

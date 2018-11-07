@@ -26,8 +26,11 @@ import { NavLink} from 'react-router-dom';
 }
 
 const mapStateToProps = (state) => {
+  
   return {
     menuCategory: state.menu
   }
 }
 export default connect(mapStateToProps)(Menu);
+
+

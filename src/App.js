@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import { connect } from 'react-redux';
 
-import { FetchApiMenu } from './store/actions/MenuAction';
 import LandingPage from './components/LandingPage';
 import { FetchApiBooks } from './store/actions/BooksAction';
 import Icon from './components/Icon';
@@ -14,7 +13,7 @@ class App extends Component {
   componentDidMount () {
 
     this.props.fetchBooks();
-    this.props.fetchMenu();
+    // this.props.fetchMenu();
   }
   render() {
     return (
@@ -36,11 +35,7 @@ const mapDispatchToProps = (dispatch) => {
   return{
     fetchBooks: () => {
       dispatch(FetchApiBooks());
-    },
-    fetchMenu: () => {
-      dispatch(FetchApiMenu());
-    }
-    
+    }  
   }
 }
 export default connect(null,mapDispatchToProps)(App);
