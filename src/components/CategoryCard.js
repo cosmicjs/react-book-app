@@ -1,31 +1,24 @@
 import React from 'react'
 import { connect } from 'react-redux'
-function Categroies(props) {
-    console.log("Propsy",props.items);
+import Cards from './Cards';
+import LandingPageContent from './LandingPageContent';
+
+function CategoryCard(props) {
   return (
     <div>
-        {
-           props.items.map((item,index) => {
-               return(
-            <div  key={index}>
-              <h1>{item.title}</h1>
-            </div>
-               )   
-            })
-        }
+        {props.category && <LandingPageContent page={props.match.params.category_slug} body={props.category}/>}
+       {props.booksList ? <Cards booksList={props.booksList}/> : <i className="fa fa-spinner fa-pulse fa-3x fa-fw"></i>}
     </div>
   )
 }
 const mapStateToProps = (state, ownProps) => {
     const category = ownProps.match.params.category_slug;
-  
-    console.log('From category', category);
     return{
-        items:state.books.filter(cat => {
-            console.log("from map", cat.metadata.category.slug);
-            return cat.metadata.category.slug === category
-        })
-          
+        booksList:state.books.filter(cat => {
+            // console.log("from map", cat.metadata.category.slug);
+            return cat.metadata.category.slug === category      
+        }),
+        category: state.menu.find(item => (item.slug === category))
     }
 }
-export default connect(mapStateToProps)(Categroies);
+export default connect(mapStateToProps)(CategoryCard);

@@ -7,12 +7,14 @@ import { FetchApiBooks } from './store/actions/BooksAction';
 import Icon from './components/Icon';
 import SinglePageCard from './components/SinglePageCard';
 import CategoryCard from './components/CategoryCard';
+import AuthorCard from './components/AuthorCard';
 
 class App extends Component {
 
   componentDidMount () {
 
     this.props.fetchBooks();
+    // this.props.fetchMenu();
   }
   render() {
     return (
@@ -22,7 +24,9 @@ class App extends Component {
             <Route path='/' exact component={LandingPage}/>
             <Route path='/search' exact component={Icon} />
             <Route path='/:item_slug' exact component={SinglePageCard} />
+            <Route path='/author/:author_slug' exact component={AuthorCard} />
             <Route path='/categories/:category_slug' component={CategoryCard} />
+            
           </Switch>
         </BrowserRouter>
       </div>
@@ -34,8 +38,7 @@ const mapDispatchToProps = (dispatch) => {
   return{
     fetchBooks: () => {
       dispatch(FetchApiBooks());
-    }
-    
+    }  
   }
 }
 export default connect(null,mapDispatchToProps)(App);

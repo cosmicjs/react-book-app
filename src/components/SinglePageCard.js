@@ -6,25 +6,26 @@ import { Link } from 'react-router-dom';
  function SinglePageCard(props) {
      
   return (
+    props.book ?
   <div className="div">
     <Link to='/search'><i className="fa fa-search fa-2x top-bar" aria-hidden="true" ></i></Link>
     <div className="single-card">
-   <div className="book"> {props.book && <img src={props.book.metadata.hero.url} alt="" />}
+   <div className="book"> {<img src={props.book.metadata.hero.url} alt="" />}
    </div>
      <div className="book-text">
-     <h1> {props.book && props.book.title}</h1>
+     <h1> {props.book.title}</h1>
      
-  { props.book ? <div className="text"  dangerouslySetInnerHTML={{__html:props.book.content}}></div> : <p> Loading </p> } 
+   <div className="text"  dangerouslySetInnerHTML={{__html:props.book.content}}></div>
   <Link to='/' className="btn-back">Go back</Link>
      </div>
     
-     <Link to='/' className="single-card-category">
+     <Link to={'/categories/' + props.book.metadata.category.slug} className="single-card-category">
      <div >
-     <span className="ctg">{props.book && props.book.metadata.category.title}</span>
+     <span className="ctg">{ props.book.metadata.category.title}</span>
      </div>
      </Link>
     </div>
-  </div>
+  </div> :  <i className="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
   )
 }
 const mapStateToProps = (state, ownProps) => {

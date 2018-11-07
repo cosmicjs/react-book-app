@@ -9,9 +9,7 @@ export default function Icon() {
   return (
     <div className="search">
     <Link to='/'><i className="fa fa-times fa-2x top-bar" aria-hidden="true"></i></Link>
-
     <MenuLikes />
-   
         <Menu />
         <Input />
         <SearchList />

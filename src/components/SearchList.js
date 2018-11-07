@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
          {
            props.value && props.lists.map((item, index) => {
                  return(
-                    <Link className="item" key={index} to={'/'}>
+                    <Link className="item" key={index} to={'/' + item.slug}>
                     <div className="item-title">{item.title}</div>
                     <div className="item-author">{item.metadata.author.title}</div>
                     </Link> 
