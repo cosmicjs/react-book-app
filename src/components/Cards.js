@@ -21,7 +21,7 @@ const Cards = (props) => {
                         <h2>{item.title}</h2>
                         </Link>
                         <br/>
-                        <div><b>Author:</b> {item.metadata.author.title}</div>
+                        <Link to={'/author/' + item.metadata.author.slug}><div><b>Author:</b> {item.metadata.author.title}</div></Link>
                         <Link to={'/categories/' + item.metadata.category.slug}><div><b>Genres:</b> {item.metadata.category.title}</div></Link> 
                     </div>
               )
