@@ -341,7 +341,14 @@ grid-row-gap: 50px;
 	font-size: 1.3rem;
 	font-weight: 300;
 }
-
+.position{
+	position: relative;
+}
+.vote{
+	position: absolute;
+	top:0;
+	left:90px;
+}
 @media(min-width:660px){
 
 	.cards{
