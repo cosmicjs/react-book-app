@@ -4,14 +4,16 @@ const initialState = {
     menu: [],
     value: '',
     search:[],
-    author:[]
+    author:[],
+    likes: [],
+    add:[]
     
 }
 
 const reducer = (state=initialState, action) => {
     switch(action.type) {
         case 'FETCH_BOOKS': 
-        console.log("bucket fetch init", action.data.bucket);
+    
             return{
                 ...state,
                 books: action.data.bucket.objects.filter(item => {
@@ -23,17 +25,27 @@ const reducer = (state=initialState, action) => {
                 author: action.data.bucket.objects.filter(item => {
                     return(item.type_slug === "authors")  
                 })
+            
             }    
         case 'INPUT_CHANGE': 
         console.log("Input", action);
         let newList = state.books.filter(item => {
             return item.slug.toLowerCase().search(action.input.toLowerCase()) !== -1 || item.metadata.author.title.toLowerCase().search(action.input.toLowerCase()) !== -1; 
-        });        
+            
+        });  
+       
         return{
             ...state,
             search: newList,
             value:action.input
         }
+        case 'HANDLE_LIKE':
+     
+            return{
+                ...state,
+                likes: state.books[action.like].options.slug_field ++
+            }
+                    
         default:
             return state;
             
