@@ -186,7 +186,15 @@ grid-row-gap: 50px;
 	
 	
 }
-
+.fa-2x{
+	color:var(--clr2);
+}
+.fa-spinner{
+	position: fixed;
+	top:45vh;
+	left:0;
+	transform: translateX(49%);
+}
 .top-bar{
 	position: absolute;
 	top:20px;
@@ -348,6 +356,9 @@ grid-row-gap: 50px;
 	position: absolute;
 	top:0;
 	left:90px;
+}
+.reset .strip{
+	display:none
 }
 @media(min-width:660px){
 

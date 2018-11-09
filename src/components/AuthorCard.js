@@ -5,7 +5,7 @@ import LandingPageContent from './LandingPageContent';
  function AuthorCard(props) {
   
   return (
-    <div>
+    <div className="reset">
         {props.author && <LandingPageContent page={props.author.title} body={props.author}/>}
        {props.booksList ? <Cards booksList={props.booksList}/> : <i className="fa fa-spinner fa-pulse fa-3x fa-fw"></i>}
     </div>

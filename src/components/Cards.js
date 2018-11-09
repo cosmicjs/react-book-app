@@ -7,7 +7,6 @@ const Cards = (props) => {
     const  Save = (item) => {
         props.hitLike(item);  
       }
-      console.log('Likes',props.like);
 
   return (
   
@@ -22,12 +21,9 @@ const Cards = (props) => {
                        <div className="strip">
                        <div className="like-menu">
         <ul className="position">
-           <li onClick={()=> Save(index)}>
+           <li onClick={()=> Save(index, item.slug)}>
             <i className="fa fa-heart-o fa-2x" aria-hidden="true"></i><span className="vote">{item.options.slug_field}</span>
-
             </li>
-            <li><i className="fa fa-bookmark-o fa-2x" aria-hidden="true"></i>
-</li>
 <li><i className="fa fa-share-square-o fa-2x" aria-hidden="true"></i>
 </li>
         </ul>  
@@ -50,12 +46,16 @@ const Cards = (props) => {
 const mapStateToProps= (state) => {
     return{
         like: state.likes
+       
     }
 }
 const mapDispatchToProps = (dispatch) => {
     return{
         hitLike: (item) => {
             dispatch({type:'HANDLE_LIKE', like: item })
+        },
+        hitAdd: (item) => {
+            dispatch({type:'HANDLE_ADD', add: item })
         }
     }
 }

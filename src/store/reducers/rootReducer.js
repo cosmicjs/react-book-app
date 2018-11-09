@@ -5,14 +5,15 @@ const initialState = {
     value: '',
     search:[],
     author:[],
-    likes: []
+    likes: [],
+    add:[]
     
 }
 
 const reducer = (state=initialState, action) => {
     switch(action.type) {
         case 'FETCH_BOOKS': 
-       
+    
             return{
                 ...state,
                 books: action.data.bucket.objects.filter(item => {
@@ -32,18 +33,19 @@ const reducer = (state=initialState, action) => {
             return item.slug.toLowerCase().search(action.input.toLowerCase()) !== -1 || item.metadata.author.title.toLowerCase().search(action.input.toLowerCase()) !== -1; 
             
         });  
-        console.log("Input state check", state.likes);      
+       
         return{
             ...state,
             search: newList,
             value:action.input
         }
         case 'HANDLE_LIKE':
+     
             return{
                 ...state,
                 likes: state.books[action.like].options.slug_field ++
             }
-          
+                    
         default:
             return state;
             
