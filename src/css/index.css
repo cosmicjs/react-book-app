@@ -126,7 +126,7 @@ h1,h2{
 
 .cards{
  max-width:360px;
- height: 2000px;
+ height: 100%;
  display:grid;
  grid-template-columns: 320px;
  grid-template-rows: auto;
