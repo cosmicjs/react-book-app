@@ -1,7 +1,6 @@
 import React from 'react'
 import Cards from './Cards';
 import { Link } from 'react-router-dom';
-import MenuLikes from './MenuLikes';
 import { connect } from 'react-redux';
 
 
@@ -14,7 +13,7 @@ const LandingPage = (props)=>{
                 <h1>Books Diary</h1>
                 <p>" Gabriel.s small cottage was lit by a single candle that cast light on a collection of weapons along one wall and a few books on a bookshelf on another "</p>
             </div>
-            <MenuLikes />
+          
         </div>
         <h2 className="cards-title">Favourite</h2>
         <Cards booksList={props.booksList}/>  

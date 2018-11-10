@@ -24,7 +24,7 @@ const Cards = (props) => {
            <li onClick={()=> Save(index, item.slug)}>
             <i className="fa fa-heart-o fa-2x" aria-hidden="true"></i><span className="vote">{item.options.slug_field}</span>
             </li>
-<li><i className="fa fa-share-square-o fa-2x" aria-hidden="true"></i>
+<li> <a href={`https://twitter.com/intent/tweet?text=${item.slug}/${item.created}/${item.metadata.author.slug}`}><i className="fa fa-share-square-o fa-2x" aria-hidden="true"></i></a>
 </li>
         </ul>  
     </div>
