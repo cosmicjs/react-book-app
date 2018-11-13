@@ -8,14 +8,10 @@
 - AdobeXD
 - (RWD - mobile, tablet, desktop) / css-grid, media 
 
-# [DEMO](https://book-diary.netlify.com/)
+# [Demo](https://cosmicjs.com/apps/react-book-app)
 
 
-## Prototype fullHD
-![Full](https://github.com/3ndrius/book_app/blob/master/src/bookdiary/Landing%20Page.png?raw=true)
-![Full-single](https://github.com/3ndrius/book_app/blob/master/src/bookdiary/1080p%20Card.png?raw=true)
-
-## Mobile prototype
-![mobile](https://github.com/3ndrius/book_app/blob/master/src/bookdiary/iPhone%206-7-8%20%E2%80%93%202.png?raw=true)
-![mobile-single](https://github.com/3ndrius/book_app/blob/master/src/bookdiary/iPhone%206-7-8%20%E2%80%93%201.png?raw=true)
-
+## Screenshots
+![React Book App](https://cosmic-s3.imgix.net/237c3030-e788-11e8-a0f7-f393606b1cf1-react-book-app-4.png?w=1200)
+![React Book App](https://cosmic-s3.imgix.net/e28ef120-e787-11e8-a8c8-ad6b576b471b-react-book-app-1.png?w=800)
+![React Book App](https://cosmic-s3.imgix.net/1ad40070-e788-11e8-a0f7-f393606b1cf1-react-book-app-2.png?w=800)
