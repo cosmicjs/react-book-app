@@ -4,7 +4,7 @@
 Uses:
 - React for UI
 - Redux for state mangaement
-- [Cosmic JS](https://cosmicjs.com)
+- [Cosmic JS](https://cosmicjs.com) for content management
 - HTML
 - CSS
 - AdobeXD
