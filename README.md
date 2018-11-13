@@ -1,7 +1,8 @@
-# Books App
+# React Book App
 
-- ReactJS
+- React
 - Redux
+- [Cosmic JS](https://cosmicjs.com)
 - HTML
 - CSS
 - AdobeXD
