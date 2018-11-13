@@ -1,7 +1,7 @@
 # React Book App
-
-- React
-- Redux
+Uses:
+- React for UI
+- Redux for state mangaement
 - [Cosmic JS](https://cosmicjs.com)
 - HTML
 - CSS
