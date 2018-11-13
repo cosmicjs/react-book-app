@@ -1,4 +1,6 @@
 # React Book App
+![React Book App](https://cosmic-s3.imgix.net/237c3030-e788-11e8-a0f7-f393606b1cf1-react-book-app-4.png?w=1200)
+# [Demo](https://cosmicjs.com/apps/react-book-app)
 Uses:
 - React for UI
 - Redux for state mangaement
@@ -7,8 +9,6 @@ Uses:
 - CSS
 - AdobeXD
 - (RWD - mobile, tablet, desktop) / css-grid, media 
-
-# [Demo](https://cosmicjs.com/apps/react-book-app)
 
 
 ## Screenshots
