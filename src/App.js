@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import { connect } from 'react-redux';
+import sal from 'sal.js';
 
 import LandingPage from './components/LandingPage';
 import { FetchApiBooks } from './store/actions/BooksAction';
@@ -14,7 +15,11 @@ class App extends Component {
   componentDidMount () {
 
     this.props.fetchBooks();
-    // this.props.fetchMenu();
+    sal({
+      threshold: 1,
+      once: false,
+    });
+
   }
   render() {
     return (

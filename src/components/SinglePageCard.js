@@ -7,7 +7,10 @@ import { Link } from 'react-router-dom';
      
   return (
     props.book ?
-  <div className="div">
+  <div className="div" data-sal="zoom-out"
+  data-sal-delay="500"
+  data-sal-duration="1200"
+  data-sal-easing="ease-out-bounce">
     <Link to='/search'><i className="fa fa-search fa-2x top-bar" aria-hidden="true" ></i></Link>
     <div className="single-card">
    <div className="book"> {<img src={props.book.metadata.hero.url} alt="" />}
